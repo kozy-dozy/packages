@@ -11,6 +11,12 @@ type Props = {
         onChange: (val: string) => void
     }>
     className?: string
+    /**
+     * Backwards-compatible no-op: Nursery passed a Tailwind label className here.
+     * Accepted so existing call sites compile; the label styling now comes from
+     * the shared FormItem theme.
+     */
+    labelClass?: string
     touched?: any
     errors?: any
 }
