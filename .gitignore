@@ -1,0 +1,23 @@
+# Dependencies / build output
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+
+# Editor / tooling
+.claude/
+.vscode/
+
+# App repositories live in their OWN GitHub repos — not tracked here.
+# (They sit alongside packages/ under this root; the apps consume the packages
+#  via relative `../../packages/*/src` aliases.)
+/center-grove-grill/
+/mk-equine/
+/michelle-points/
+/nursery/
+/varsity-spotlight/
+
+# Never commit secrets
+.env
+.env.*

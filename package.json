@@ -1,0 +1,12 @@
+{
+  "name": "kozydozy-platform",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Shared design-system packages for the Kozy Dozy app portfolio (Phase 1: tokens, theme, ui).",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "yarn workspace @kozydozy/tokens typecheck && yarn workspace @kozydozy/theme typecheck && yarn workspace @kozydozy/ui typecheck && yarn workspace @kozydozy/forms typecheck && yarn workspace @kozydozy/shared typecheck && yarn workspace @kozydozy/foundation typecheck && yarn workspace @kozydozy/routing typecheck && yarn workspace @kozydozy/layout typecheck"
+  }
+}

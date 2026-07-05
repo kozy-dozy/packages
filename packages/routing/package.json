@@ -1,0 +1,31 @@
+{
+  "name": "@kozydozy/routing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared React Router route guards for the Kozy Dozy platform (auth/session-driven), built on @kozydozy/foundation.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@kozydozy/foundation": "0.1.0",
+    "@kozydozy/shared": "0.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "6.26.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "react": "19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "6.26.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@kozydozy/ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared styled-components UI primitives for the Kozy Dozy platform (extracted from MK Equine + Michelle Points).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./Avatar": "./src/Avatar/index.tsx",
+    "./Badge": "./src/Badge/index.tsx",
+    "./Button": "./src/Button/index.tsx",
+    "./Card": "./src/Card/index.tsx",
+    "./Checkbox": "./src/Checkbox/index.tsx",
+    "./ConfigProvider": "./src/ConfigProvider/index.ts",
+    "./Dialog": "./src/Dialog/index.tsx",
+    "./Dropdown": "./src/Dropdown/index.tsx",
+    "./Form": "./src/Form/index.tsx",
+    "./Input": "./src/Input/index.tsx",
+    "./ScrollBar": "./src/ScrollBar/index.tsx",
+    "./Select": "./src/Select/index.tsx",
+    "./Skeleton": "./src/Skeleton/index.ts",
+    "./Spinner": "./src/Spinner/index.ts",
+    "./Switcher": "./src/Switcher/index.tsx",
+    "./Tag": "./src/Tag/index.tsx",
+    "./Tooltip": "./src/Tooltip/index.tsx",
+    "./Upload": "./src/Upload/index.tsx"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@kozydozy/theme": "0.1.0",
+    "@floating-ui/react": "^0.27.2",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
+    "framer-motion": "^11.15.0",
+    "lodash": "^4.17.21",
+    "react-custom-scrollbars-4": "^4.5.1",
+    "react-icons": "5.4.0",
+    "react-modal": "^3.16.3",
+    "react-router-dom": "6.26.2",
+    "react-select": "^5.9.0"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@types/react-modal": "^3.13.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "styled-components": "^6.1.13",
+    "typescript": "^5.7.2"
+  }
+}

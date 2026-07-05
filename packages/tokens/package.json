@@ -1,0 +1,22 @@
+{
+  "name": "@kozydozy/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Framework-agnostic design tokens for the Kozy Dozy platform: invariant scales plus per-brand presets.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./presets/mk-equine": "./src/presets/mk-equine.ts",
+    "./presets/michelle-points": "./src/presets/michelle-points.ts",
+    "./presets/varsity-spotlight": "./src/presets/varsity-spotlight.ts",
+    "./presets/nursery": "./src/presets/nursery.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@kozydozy/theme",
+  "version": "0.1.0",
+  "private": true,
+  "description": "styled-components theme layer for the Kozy Dozy platform: PlatformTheme contract, createTheme factory, and GlobalStyle.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@kozydozy/tokens": "0.1.0"
+  },
+  "peerDependencies": {
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "react": "19.0.0",
+    "styled-components": "^6.1.13",
+    "typescript": "^5.7.2"
+  }
+}
