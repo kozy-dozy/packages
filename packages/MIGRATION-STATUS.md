@@ -23,7 +23,7 @@ migration of the four apps onto them.
 | **mk-equine** | ✅ Fully migrated (ui/forms/shared/theme/foundation/routing/layout). typecheck + build green. |
 | **michelle-points** | ✅ Fully migrated. typecheck + build green. |
 | **varsity-spotlight** | ✅ Fully migrated (ecom app: cart/compare/favorites/orders/players). typecheck + build green. |
-| **nursery** | 🟡 In conversion. Phase 3a: styled foundation wired (coexists w/ Tailwind). Phase 3b: marketing shell (EcomLayout header/nav, AnnouncementBar, ecom Footer) + Home page rebuilt in styled-components (premium editorial). Phase 3c: Product Listing Page (Shop.tsx, ShopFilters.tsx, ProductCard.tsx) rebuilt in styled-components + `@kozydozy/ui` Button/Select/Input/Checkbox. Product detail/cart/checkout/admin/auth still Tailwind. |
+| **nursery** | 🟡 In conversion. Phase 3a: styled foundation wired (coexists w/ Tailwind). Phase 3b: marketing shell (EcomLayout header/nav, AnnouncementBar, ecom Footer) + Home page rebuilt in styled-components (premium editorial). Phase 3c: Product Listing Page (Shop.tsx, ShopFilters.tsx, ProductCard.tsx) rebuilt in styled-components + `@kozydozy/ui` Button/Select/Input/Checkbox. Phase 3d: Product Detail Page (ProductDetailPage.tsx + Gallery/VariantButton/TabSection/Recommended, plus shared WishlistButton/ShareButton) rebuilt in styled-components + `@kozydozy/ui` Card/Button/Checkbox/Tabs/Notification/toast. Cart/checkout/admin/auth still Tailwind. |
 
 `@kozydozy/tokens` now has presets for **all four** apps (`mkEquineTokens`,
 `michellePointsTokens`, `varsitySpotlightTokens`, `nurseryTokens`).
