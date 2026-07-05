@@ -13,7 +13,9 @@ import styled, { css } from 'styled-components'
  */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'solid' | 'default' | 'plain' | 'twoTone'
-    size?: 'sm' | 'md' | 'lg'
+    size?: 'xs' | 'sm' | 'md' | 'lg'
+    /** Corner treatment. `circle`/`round` render a pill/round (icon) button. */
+    shape?: 'default' | 'round' | 'circle'
     loading?: boolean
     block?: boolean
     active?: boolean
@@ -22,6 +24,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const sizeStyles = {
+    xs: css`
+        font-size: ${({ theme }) => theme.fontSize.xs};
+        padding: 4px 10px;
+    `,
     sm: css`
         font-size: ${({ theme }) => theme.fontSize.sm};
         padding: ${({ theme }) => theme.components.button.padding.sm};
@@ -39,6 +45,7 @@ const sizeStyles = {
 const StyledButton = styled.button<{
     $variant: string
     $size: string
+    $shape: string
     $block: boolean
     $loading: boolean
 }>`
@@ -46,7 +53,10 @@ const StyledButton = styled.button<{
     align-items: center;
     justify-content: center;
     gap: ${({ theme }) => theme.spacing.sm};
-    border-radius: ${({ theme }) => theme.components.button.radius};
+    border-radius: ${({ theme, $shape }) =>
+        $shape === 'circle' || $shape === 'round'
+            ? '9999px'
+            : theme.components.button.radius};
     font-weight: 600;
     line-height: ${({ theme }) => theme.components.button.lineHeight};
     text-transform: ${({ theme }) => theme.components.button.textTransform};
@@ -134,6 +144,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {
             variant = 'default',
             size = 'md',
+            shape = 'default',
             loading = false,
             block = false,
             disabled,
@@ -148,6 +159,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 $variant={variant}
                 $size={size}
+                $shape={shape}
                 $block={block}
                 $loading={loading}
                 disabled={disabled || loading}
